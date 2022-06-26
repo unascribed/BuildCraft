@@ -74,6 +74,7 @@ public class TileAssemblyTable extends TileEntity implements IMachine, IInventor
 		return result;
 	}
 
+	@Override
 	public void receiveLaserEnergy(float energy) {
 		energyStored += energy;
 		recentEnergy[tick] += energy;
@@ -492,4 +493,10 @@ public class TileAssemblyTable extends TileEntity implements IMachine, IInventor
 	public int getZCoord() {
 		return zCoord;
 	}
+	
+	@Override
+	public boolean isLaserInvalid() {
+		return isInvalid();
+	}
+	
 }
