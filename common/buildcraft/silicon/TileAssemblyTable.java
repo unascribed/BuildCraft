@@ -492,4 +492,9 @@ public class TileAssemblyTable extends TileEntity implements IMachine, IInventor
 	public int getZCoord() {
 		return zCoord;
 	}
+
+	@Override
+	public boolean isInvalid() {
+		return this.tileEntityInvalid;
+	}
 }
